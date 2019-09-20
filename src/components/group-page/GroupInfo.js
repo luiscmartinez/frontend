@@ -3,6 +3,7 @@ import { Icon } from "semantic-ui-react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { device } from "../../styled/device"
 
 import MembershipStatus from "./MembershipStatus";
 import AllegiancePopover from "./AllegiancePopover";
@@ -76,6 +77,9 @@ const GroupInfoDiv = styled.div`
 const ImageDiv = styled.div`
   display: flex;
   flex-direction: column;
+@media ${device.laptop} {
+  margin-top: 4%;
+}
 `;
 
 const SubInfo = styled.div`
@@ -102,6 +106,10 @@ const InfoDiv = styled.div`
   margin: 0 4% 4% 4%;
   justify-content: center;
   min-height: 50%;
+  @media ${device.laptop} {
+   margin-top: 7%;
+   margin-left: 15%;
+  }
   h1 {
     font-size: 1.45rem;
     text-align: left;
