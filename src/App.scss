@@ -1,7 +1,18 @@
 .App {
+  width: 100%;
   text-align: center;
   padding-top: 11%;
   padding-bottom: 12%;
   // height: 100vh;
   // min-height: 100vh;
+ @media (min-width: 1024px) {
+   padding-top: 4%;
+ }
+}
+
+
+h1 {
+  @media (min-width: 1024px) {
+		font-size: 3.5rem
+	}
 }

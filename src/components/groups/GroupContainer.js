@@ -35,6 +35,11 @@ function GroupContainer() {
 export default GroupContainer;
 
 const Container = styled.div`
+@media (min-width: 1024px) {
+  width: 80%;
+  margin: 0 auto;
+}
+
   h3 {
     text-align: left;
     margin-left: 5%;
@@ -42,6 +47,9 @@ const Container = styled.div`
 `;
 const MyGroups = styled.div`
   margin: 2% 5%;
+  @media (min-width: 1024px) {
+    margin: 2% 20%;
+  }
 `;
 
 const GroupTitleHolder = styled.div`

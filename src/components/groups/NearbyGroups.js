@@ -6,6 +6,7 @@ import { Loader } from "semantic-ui-react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 import useGetToken from "../utils/useGetToken";
 import styled from "styled-components";
+import { device } from '../../styled/device';
 
 import GroupCard from "./GroupCard";
 
@@ -95,16 +96,17 @@ const SectionContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+
 `;
 
 const NearbyGroupsContainer = styled.div`
-  width: 98%;
+  width: 100%;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
   margin-left: 1%;
   padding-bottom: 3%
-  &::-webkit-scrollbar {
+  &;:-webkit-scrollbar {
     display: none;
   }
 `;

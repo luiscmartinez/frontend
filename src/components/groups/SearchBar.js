@@ -7,6 +7,7 @@ import useDebounce from "../utils/useDebounce";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
 import styled from "styled-components";
+import { device } from '../../styled/device';
 
 import SearchResults from "./SearchResults";
 
@@ -130,6 +131,9 @@ const SearchFormWrapper = styled.div`
 	margin: 0 auto;
 	width: 90%;
 	position: relative;
+	@media ${device.laptop} {
+		width: 60%
+	}
 `;
 
 const SearchForm = styled.form`

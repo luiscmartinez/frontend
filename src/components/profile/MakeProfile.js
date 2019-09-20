@@ -158,7 +158,7 @@ marginBottom: 15%;
 `
 
 const BoldInput = styled(Form.Input)`
-input: first-child {
+input:first-child {
 	font-weight: bold;
 } `
 

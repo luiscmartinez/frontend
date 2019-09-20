@@ -89,7 +89,7 @@ const MiddleDiv = styled.div`
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
   color: black;
-  }};
+  };
   font-weight: heavy;
   p {
     align-content: flex-end;

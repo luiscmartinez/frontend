@@ -8,6 +8,7 @@ import axios from "axios"
 import useGetToken from "../utils/useGetToken";
 import { ENTER_PROFILE } from "../../reducers/userReducer";
 import defaultBanner from "../../assets/defaultBanner.jpg";
+import { device } from '../../styled/device';
 
 const Profile = props => {
   const loggedInUser = useSelector(state => state.userReducer.loggedInUser);
@@ -106,12 +107,20 @@ const ProfileContainer = styled.div`
   margin-bottom: 10%;
 `;
 
-const Banner = styled.div``;
+const Banner = styled.div`
+display: flex;
+justify-content: center;
+`;
 
 const BannerImage = styled.img`
-width: 100%
+width: 100%;
 border-bottom: 10px solid black;
-max-height: 225px;
+max-height: 400px;
+@media ${device.laptop} {
+  
+  padding-top: 10%;
+  max-height: 550px;
+}
 `;
 
 const InfoHolder = styled.div`
@@ -139,7 +148,7 @@ const ImageCrop = styled.div`
   background-color: white;
 `;
 const ProfileImage = styled.img`
-  display: inline;
+  display: inline-block;
   margin-left: -25%; //centers the image
   height: 100%;
   width: auto;
@@ -156,7 +165,7 @@ const H3 = styled.h3`
 const PostHeader = styled.div`
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between
+	justify-content: space-between;
 	align-items: center;
 	margin-left: 5%;
 	margin-right: 5%;
