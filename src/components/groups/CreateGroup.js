@@ -14,6 +14,7 @@ import DeleteGroup from "./DeleteGroup"
 import { Form, Icon, Modal, Segment } from "semantic-ui-react";
 import styled from "styled-components";
 import Default from "../../assets/walter-avi.png"
+import { device } from '../../styled/device';
 
 const CreateGroup = props => {
 	const loggedInUser = useSelector(state => state.userReducer.loggedInUser);
@@ -171,7 +172,9 @@ padding-top: 5%;
 margin-top: -1.5%;
 @media (max-width: 320px) {
 	height: 87vh
-}`
+}
+@media 
+`
 
 const FormSegment = styled(Segment)`
 width: 90%;

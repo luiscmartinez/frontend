@@ -7,6 +7,7 @@ import GroupList from "./GroupList";
 import SearchBar from "./SearchBar";
 import MyAllegianceGroups from "../profile/MyAllegianceGroups";
 import NearbyGroups from "./NearbyGroups";
+import { device } from '../../styled/device';
 
 function GroupContainer() {
   const loggedInGroups = useSelector(state => state.userReducer.loggedInGroups);
@@ -35,7 +36,7 @@ function GroupContainer() {
 export default GroupContainer;
 
 const Container = styled.div`
-@media (min-width: 1024px) {
+@media ${device.laptop} {
   width: 80%;
   margin: 0 auto;
 }
@@ -47,7 +48,7 @@ const Container = styled.div`
 `;
 const MyGroups = styled.div`
   margin: 2% 5%;
-  @media (min-width: 1024px) {
+  @media ${device.laptop} {
     margin: 2% 20%;
   }
 `;

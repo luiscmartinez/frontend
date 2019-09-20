@@ -39,6 +39,9 @@ const LandingContainer = styled.div`
 	margin-top: -11%;
 	margin-bottom: -12%;
 	align-items: center;
+	@media ${device.laptop} {
+		height: 113.9vh;
+	}
 `;
 
 const LogoHolder = styled.div`

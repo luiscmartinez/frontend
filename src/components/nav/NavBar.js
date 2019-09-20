@@ -7,6 +7,7 @@ import styled from "styled-components";
 import { Menu, Icon } from "semantic-ui-react";
 import IconButton from "@material-ui/core/IconButton";
 import { ArrowBack } from "@material-ui/icons";
+import { device } from '../../styled/device';
 
 const NavBar = () => {
 	const { isAuthenticated, logout } = useAuth0();
@@ -126,7 +127,6 @@ const TopNav = styled.div`
 	z-index: 2;
 	-webkit-transition: height 0.2s ease-in-out;
 	transition: height 0.2s ease-in-out;
-	border-radius: 0;
 	p {
 		width: 70%;
 		margin: 0;
@@ -134,7 +134,7 @@ const TopNav = styled.div`
 	@media (max-width: 320px) {
 		max-width: 320px
 	}
-	@media (min-width: 1024px) {
+	@media ${device.laptop} {
 		width: 85%;
 	} 
 `;
@@ -161,6 +161,7 @@ const BottomNav = styled.div`
 	}
 	@media (min-width: 1024px) {
 		width: 85%;
+		
 	}
 `;
 

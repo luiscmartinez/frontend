@@ -105,11 +105,15 @@ const ProfileContainer = styled.div`
   justify-content: center;
   margin-top: -4.5%;
   margin-bottom: 10%;
+  @media ${device.laptop} {
+    margin-top: -4%;
+  }
 `;
 
 const Banner = styled.div`
 display: flex;
 justify-content: center;
+width: 100%;
 `;
 
 const BannerImage = styled.img`
@@ -117,9 +121,9 @@ width: 100%;
 border-bottom: 10px solid black;
 max-height: 400px;
 @media ${device.laptop} {
-  
-  padding-top: 10%;
-  max-height: 550px;
+  margin-top:2%;
+  padding-top: 7%;
+  max-height: 500px;
 }
 `;
 
@@ -146,6 +150,9 @@ const ImageCrop = styled.div`
   margin-left: auto;
   margin-right: auto;
   background-color: white;
+  @media ${device.laptop} {
+margin-bottom: -3rem;
+  }
 `;
 const ProfileImage = styled.img`
   display: inline-block;
