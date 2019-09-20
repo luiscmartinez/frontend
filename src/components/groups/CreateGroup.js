@@ -172,9 +172,7 @@ padding-top: 5%;
 margin-top: -1.5%;
 @media (max-width: 320px) {
 	height: 87vh
-}
-@media 
-`
+}`
 
 const FormSegment = styled(Segment)`
 width: 90%;
