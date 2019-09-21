@@ -114,6 +114,10 @@ const Banner = styled.div`
 display: flex;
 justify-content: center;
 width: 100%;
+@media ${device.laptop} {
+  width: 100%;
+  margin: 0 auto;
+}
 `;
 
 const BannerImage = styled.img`

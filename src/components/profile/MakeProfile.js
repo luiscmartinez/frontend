@@ -11,7 +11,8 @@ import useImageUploader from "../utils/useImageUploader";
 
 import { Form, Icon, Modal, Segment } from "semantic-ui-react";
 import styled from "styled-components"
-import Default from "../../assets/walter-avi.png"
+import Default from "../../assets/walter-avi.png";
+import { device } from "../../styled/device";
 
 
 const MakeProfile = props => {
@@ -149,12 +150,22 @@ padding-top: 5%;
 margin-top: -1.5%;
 @media (max-width: 320px) {
 	height: 87vh
-}`
+}
+@media ${device.laptop} {
+	margin-right: 7.5%;
+	margin-left: 7.5%;
+	padding-top: 8%;
+}
+`
 
 const FormSegment = styled(Segment)`
 width: 90%;
 margin: auto;
-marginBottom: 15%;
+/* marginBottom: 15%; */
+@media ${device.laptop} {
+	width: 70%;
+}
+
 `
 
 const BoldInput = styled(Form.Input)`
