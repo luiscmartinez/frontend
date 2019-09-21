@@ -96,7 +96,7 @@ const GroupPageContainer = styled.div`
   min-height: 87vh;
   justify-content: flex-start;
   @media ${device.laptop} {
-    background-color: red;
+    background-color: white;
     margin-top: .5%;
 
   }

@@ -1,3 +1,7 @@
+// * {
+//   border: 1px solid #f00 !important;
+// }
+
 .App {
   width: 100%;
   text-align: center;
@@ -7,6 +11,7 @@
   // min-height: 100vh;
  @media (min-width: 1024px) {
    padding-top: 4%;
+   padding-bottom: 3%;
  }
 }
 h1 {
@@ -27,5 +32,4 @@ form.reply-form {
   @media (min-width: 1024px) {
     background-color: white;
   }
-  
 }

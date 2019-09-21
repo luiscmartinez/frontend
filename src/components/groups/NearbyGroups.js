@@ -104,7 +104,6 @@ const NearbyGroupsContainer = styled.div`
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  margin-left: 1%;
   padding-bottom: 3%
   &;:-webkit-scrollbar {
     display: none;

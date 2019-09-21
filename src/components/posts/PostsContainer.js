@@ -59,10 +59,15 @@ const PostListContainer = styled.div`
   padding-bottom: 15%;
   @media ${device.laptop} {
     background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-left: 9%;
+    padding-right: 9%;
   }
 `;
 const PostsWrapper = styled.div`
-  background-color: #dee4e7;
+ 
 `;
 const PaperContainer = styled(Paper)`
   padding: 3.5rem;
