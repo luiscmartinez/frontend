@@ -8,6 +8,7 @@ import { Loader } from "semantic-ui-react";
 import { green } from "@material-ui/core/colors";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
+import { device } from "../../styled/device";
 import Fab from "@material-ui/core/Fab";
 import AddIcon from "@material-ui/icons/Add";
 
@@ -167,6 +168,12 @@ const ReplyViewContainer = styled.div`
   background-color: #dee4e7;
   min-height: 87vh;
   justify-content: flex-start;
+  @media ${device.laptop} {
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    padding-top: 10%;
+  }
 `;
 const ReplyCardsContainer = styled.div`
   width: 100%;

@@ -23,8 +23,8 @@ h1 {
 
 .MuiPaper-elevation3 {
   @media (min-width: 1024px) {
-    width: 70%;
- margin: 0 auto;
+    width: 75%;
+   margin: 0 auto;
   }
   
 }
@@ -37,6 +37,14 @@ form.reply-form {
   @media (min-width: 1024px) {
   padding-right: 1%;
   }
-  
 }
+.addAllegiance {
+  @media (min-width: 1024px) {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+  }
+ 
+}
+
 

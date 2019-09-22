@@ -78,7 +78,8 @@ const AddAllegiance = props => {
       </Loader>
     );
 
-  return (
+  return ( 
+  <div className="addAllegiance">
     <Segment
       raised
       color="blue"
@@ -87,6 +88,7 @@ const AddAllegiance = props => {
       <Tab menu={{ borderless: true, pointing: true }} panes={panes} />
       <Link to="/makeallegiance">Can't find your Allegiance? Click here!</Link>
     </Segment>
+    </div>
   );
 };
 

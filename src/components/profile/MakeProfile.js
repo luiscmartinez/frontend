@@ -161,9 +161,10 @@ margin-top: -1.5%;
 const FormSegment = styled(Segment)`
 width: 90%;
 margin: auto;
-/* marginBottom: 15%; */
+marginBottom: 15%;
 @media ${device.laptop} {
-	width: 70%;
+	width: 75%;
+	margin: 0 auto;
 }
 
 `

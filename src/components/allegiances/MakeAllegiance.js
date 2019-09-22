@@ -7,8 +7,9 @@ import useGetToken from "../utils/useGetToken";
 import useForm from "../utils/useForm";
 import useImageUploader from "../utils/useImageUploader";
 import { ADD_ALLEGIANCE } from "../../reducers/userReducer";
-import styled from "styled-components"
-import Default from "../../assets/walter-avi.png"
+import styled from "styled-components";
+import Default from "../../assets/walter-avi.png";
+import { device } from "../../styled/device";
 
 const MakeAllegiance = props => {
   //Fetches logged in user's info from redux store.
@@ -108,14 +109,22 @@ padding-top: 5%;
 margin-top: -1.5%;
 @media (max-width: 320px) {
 	height: 87vh
-}`
+}
+@media ${device.laptop} {
+  padding-top: 10%;
+  background-color: white;
+}
+`
 
 const FormSegment = styled(Segment)`
 width: 90%;
 margin: auto;
 marginBottom: 15%;
+@media ${device.laptop}{
+  width: 60%;
+ height: 45vh;
+}
 `
-
 const UploadIcon = styled(Icon)`
 position: absolute;
 top: 2.8rem;

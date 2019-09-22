@@ -107,6 +107,8 @@ const ProfileContainer = styled.div`
   margin-bottom: 10%;
   @media ${device.laptop} {
     margin-top: -4%;
+    width: 100%;
+     
   }
 `;
 
@@ -115,8 +117,7 @@ display: flex;
 justify-content: center;
 width: 100%;
 @media ${device.laptop} {
-  width: 100%;
-  margin: 0 auto;
+  
 }
 `;
 
@@ -128,6 +129,7 @@ max-height: 400px;
   margin-top:2%;
   padding-top: 7%;
   max-height: 500px;
+ 
 }
 `;
 
