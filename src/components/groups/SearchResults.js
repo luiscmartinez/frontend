@@ -33,7 +33,7 @@ const SearchResults = props => {
             onClick={() => mixpanelCheck()}
           >
             <div className={`single-result ${className}`}>
-              <ResultImage src={group.image} alt={"Group Image"} />{" "}
+              <ResultImage src={group.image} />{" "}
               <ResultName className="result-info">
                 {group.group_name}
               </ResultName>

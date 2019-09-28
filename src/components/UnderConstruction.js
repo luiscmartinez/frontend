@@ -7,7 +7,7 @@ const UnderConstruction = props => {
     return (
         <ConstructionDiv>
             <h1>Feature Coming Soon!</h1>
-            <Image src={ComingSoon} alt={"Under Construction"} />
+            <Image src={ComingSoon} />
         </ConstructionDiv>
     )
 }

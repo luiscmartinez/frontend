@@ -23,7 +23,7 @@ const MakeProfile = props => {
 	const [token] = useGetToken();
 
 	//Imports form custom hook to handle state, form entry and form submission.
-	const { values, handleChange, handleSubmit, setValues, SubmitButton, ErrorMessage, setError, setLoading } = useForm(updateUser);
+	const { values, handleChange, handleSubmit, setValues, SubmitButton, ErrorMessage } = useForm(updateUser);
 
 	//Imports image upload functions
 	const { image, UploaderUI, modalOpen, setModal } = useImageUploader()
@@ -44,8 +44,6 @@ const MakeProfile = props => {
 		}
 		catch {
 			Mixpanel.activity(loggedInUser.id, 'Edit Profile Failed')
-			setError(true)
-			setLoading(false)
 		}
 	}
 
@@ -65,7 +63,7 @@ const MakeProfile = props => {
 						<Modal
 							open={modalOpen}
 							onClose={() => setModal(false)}
-							trigger={<ProfilePic onClick={() => setModal(true)} src={image || values.image || Default} alt={"Image Preview"} />}>
+							trigger={<ProfilePic onClick={() => setModal(true)} src={image || values.image || Default} />}>
 							<UploaderUI displayImage={image || values.image} />
 						</Modal>
 						<NameHolder>

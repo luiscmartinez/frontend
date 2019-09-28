@@ -14,7 +14,10 @@ const useForm = callback => {
 			setError(false)
 			callback();
 		}
-		catch{ }
+		catch {
+			setLoading(false)
+			setError(true)
+		}
 	};
 
 	const handleChange = event => {
@@ -46,9 +49,7 @@ const useForm = callback => {
 		setValues,
 		values,
 		SubmitButton,
-		ErrorMessage,
-		setError,
-		setLoading
+		ErrorMessage
 	};
 };
 

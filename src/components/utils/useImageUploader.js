@@ -24,7 +24,7 @@ const useImageUploader = type => {
                 process.env.REACT_APP_CLOUDINARY_URL,
                 formData
             )
-            type === 'banner' ? setBanner(result.data.secure_url) : setImage(result.data.secure_url)
+            type === 'banner' ? setBanner(result.data.url) : setImage(result.data.url)
         }
         uploadImage()
     }, [type])
@@ -47,7 +47,7 @@ const useImageUploader = type => {
                 </Uploader>
                 <PreviewHolder>
                     {`Preview of Your New ${'Profile'} Image:`}
-                    <ProfilePic src={props.displayImage || Default} alt={"Preview"} />
+                    <ProfilePic src={props.displayImage || Default} />
                 </PreviewHolder>
                 <DoneButton>
                     <Button onClick={() => setModal(false)} color='violet' fluid>Done</Button>

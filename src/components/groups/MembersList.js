@@ -3,7 +3,13 @@ import { axiosWithAuth } from "../utils/axiosWithAuth";
 import useGetToken from "../utils/useGetToken";
 import { useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
-import { SwipeableDrawer, Button, List, ListItem, ListItemText, ListItemIcon, Avatar } from "@material-ui/core/";
+import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
+import Button from "@material-ui/core/Button";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import Avatar from "@material-ui/core/Avatar";
 import avi from "../../assets/walter-avi.png";
 import blueGrey from "@material-ui/core/colors/blueGrey";
 import red from "@material-ui/core/colors/red";
@@ -113,7 +119,6 @@ const MembersList = props => {
               <Avatar
                 className={classes.avatar}
                 src={!member.image ? avi : member.image}
-                alt={"User Avatar"}
               />
             </ListItemIcon>
             <ListItemText primary={member.name} className={classes.text} />

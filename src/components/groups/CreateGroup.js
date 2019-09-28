@@ -27,7 +27,7 @@ const CreateGroup = props => {
 
 	//Imports form custom hook to handle state, form entry and form submission.
 	const requestType = window.location.pathname.includes("/editgroup/") ? editGroup : createGroup;
-	const { values, handleChange, handleSubmit, setValues, SubmitButton, ErrorMessage, setError, setLoading } = useForm(requestType);
+	const { values, handleChange, handleSubmit, setValues, SubmitButton, ErrorMessage } = useForm(requestType);
 
 	//If in edit mode, sets group to equal props. Then sets form input values to the group's current info.
 	const group = props.location.state ? props.location.state.group : null;
@@ -58,8 +58,6 @@ const CreateGroup = props => {
 			setTimeout(push, 1000);
 		} catch {
 			Mixpanel.activity(loggedInUser.id, 'Group Creation Failed')
-			setError(true)
-			setLoading(false)
 		}
 	}
 
@@ -101,17 +99,16 @@ const CreateGroup = props => {
 						<Modal
 							open={modalOpen}
 							onClose={() => setModal(false)}
-							trigger={<ProfilePic onClick={() => setModal(true)} src={image || values.image || Default} alt={"Image Preview"} />}>
+							trigger={<ProfilePic onClick={() => setModal(true)} src={image || values.image || Default} />}>
 							<UploaderUI displayImage={image || values.image} />
 						</Modal>
 						<NameHolder>
 							<BoldInput
 								required
 								transparent
-								placeholder="Name Your Group (Max 50)"
+								placeholder="Name Your Group"
 								onChange={handleChange}
 								value={values.group_name || ""}
-								maxLength="50"
 								name="group_name"
 								type="text" />
 							<Form.Input
@@ -213,7 +210,6 @@ flex-direction: column;
 justify-content: space - evenly;
 margin-left: 7px;
 margin-bottom: 1rem;
-width: 100%;
 `
 
 export default CreateGroup;
