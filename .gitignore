@@ -20,6 +20,7 @@ cypress.env.json
 .env.test.local
 .env.production.local
 .vscode
+.env
 
 
 npm-debug.log*
