@@ -1,26 +1,18 @@
-export const VIEW_REPLIES = "VIEW_REPLIES";
-export const VIEW_GROUP = "VIEW_GROUP";
+import { createSlice } from 'redux-starter-kit'
 
-const initialState = {
-	groupID: 0,
-	error: ""
-};
+const navReducer = createSlice({
+  slice: 'navReducer',
+  initialState: {
+    groupID: 0,
+    error: '',
+  },
+  reducers: {
+    viewGroup(state, action) {
+      return { ...state, groupID: action.payload }
+    },
+  },
+})
 
-export const navReducer = (state = initialState, action) => {
-	switch (action.type) {
-		case VIEW_REPLIES:
-			return {
-				...state,
-				groupID: action.payload,
-				error: ""
-			};
-		case VIEW_GROUP:
-			return {
-				...state,
-				groupID: action.payload,
-				error: ""
-			};
-		default:
-			return state;
-	}
-};
+export const { viewGroup } = navReducer.actions
+
+export default navReducer.reducer
