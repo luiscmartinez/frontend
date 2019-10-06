@@ -94,14 +94,15 @@ const ProfilePic = styled.img`
 `
 
 const Uploader = styled.div`
-background: #fff;
-padding: 16px;
-width: 90%
-border: 2px dashed lightgrey
-display: flex
-justify-content: center
-text-align: center
-margin: auto`
+  background: #fff;
+  padding: 16px;
+  width: 90%;
+  border: 2px dashed lightgrey;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+`
 
 const Text = styled.p`
   margin: 1rem 0 1rem 0;
@@ -120,10 +121,11 @@ const PreviewHolder = styled.div`
 `
 
 const DoneButton = styled.div`
-width: 50%;
-display: flex;
-justify-content: center
-margin: auto; `
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+`
 
 const UploadModal = styled(Modal.Content)`
   : first-child {
