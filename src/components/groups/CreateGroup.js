@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { ADD_GROUP } from '../../reducers/userReducer'
-import { VIEW_GROUP } from '../../reducers/navReducer'
-
+import { viewGroup } from 'reducers/navReducer'
 import { Mixpanel } from '../analytics/Mixpanel'
 
 import useForm from '../utils/useForm'
@@ -48,7 +47,7 @@ const CreateGroup = props => {
     if (group && window.location.pathname.includes('/editgroup/')) {
       let { id, updated_at, created_at, ...groupInfo } = group
       setValues(groupInfo)
-      dispatch({ type: VIEW_GROUP, payload: id })
+      dispatch(viewGroup(id))
       Mixpanel.activity(loggedInUser.id, 'Start Edit Group')
     }
   }, [props, setValues, group, loggedInUser.id, dispatch])
